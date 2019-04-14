@@ -3,10 +3,13 @@
 	"version": "0.1.0",
 	"private": true,
 	"scripts": {
-		"serve": "vue-cli-service serve",
-		"build": "vue-cli-service build",
-		"lint": "vue-cli-service lint"
+		"dev": "poi --serve --open",
+		"start": "yarn run dev",
+		"test:lint": "eslint --ext .js,.vue src",
+		"lint": "eslint --ext .js,.vue src --fix",
+		"build": "poi --prod"
 	},
+	"main": "src/main.js",
 	"dependencies": {
 		"buefy": "^0.7.4",
 		"bulma": "^0.7.4",
