@@ -38,6 +38,8 @@
 </template>
 
 <script>
+import { saveState } from '../util.js';
+
 export default {
     name: 'AppFooter',
     computed: {
@@ -48,7 +50,7 @@ export default {
     methods: {
         toggleDark() {
             this.$parent.dark = !this.$parent.dark;
-            localStorage.setItem('dark', String(this.$parent.dark));
+            saveState('dark', String(this.$parent.dark));
         }
     }
 };
